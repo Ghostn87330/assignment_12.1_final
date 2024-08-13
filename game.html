@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive and scales correctly on different devices -->
+    <title>Truth or Dare Game</title> <!-- The title of the page, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling the page -->
+</head>
+<body class="game-background"> <!-- Applies a background image using the "game-background" class -->
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="dropdown"> <!-- Container for the dropdown menu -->
+            <button class="dropbtn" onclick="toggleDropdown()">Menu</button> <!-- Button that toggles the dropdown menu when clicked -->
+            <div id="myDropdown" class="dropdown-content"> <!-- The dropdown content, hidden by default, shown when the button is clicked -->
+                <a href="index.html">Home</a> <!-- Link to the Home page -->
+                <a href="profile.html">Artist Profile</a> <!-- Link to the Artist Profile page -->
+                <a href="music.html">Music Player</a> <!-- Link to the Music Player page -->
+                <a href="tour.html">Tour Dates</a> <!-- Link to the Tour Dates page -->
+                <a href="game.html">Truth or Dare Game</a> <!-- Link to the Truth or Dare Game page -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="game-container"> <!-- Container for the game, centered on the page -->
+        <h1>Truth or Dare</h1> <!-- Heading for the game -->
+        <button onclick="showTruth()">Truth</button> <!-- Button to trigger a truth question -->
+        <button onclick="showDare()">Dare</button> <!-- Button to trigger a dare -->
+        <p id="result"></p> <!-- Paragraph where the selected truth or dare will be displayed -->
+    </div>
+
+    <script src="script.js"></script> <!-- Links to an external JavaScript file for interactive functionality -->
+</body>
+</html>

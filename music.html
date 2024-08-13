@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive and scales correctly on different devices -->
+    <title>Music Player</title> <!-- The title of the page, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling the page -->
+</head>
+<body class="music-background"> <!-- Applies a background image using the "music-background" class -->
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="dropdown"> <!-- Container for the dropdown menu -->
+            <button class="dropbtn" onclick="toggleDropdown()">Menu</button> <!-- Button that toggles the dropdown menu when clicked -->
+            <div id="myDropdown" class="dropdown-content"> <!-- The dropdown content, hidden by default, shown when the button is clicked -->
+                <a href="index.html">Home</a> <!-- Link to the Home page -->
+                <a href="profile.html">Artist Profile</a> <!-- Link to the Artist Profile page -->
+                <a href="music.html">Music Player</a> <!-- Link to the Music Player page -->
+                <a href="tour.html">Tour Dates</a> <!-- Link to the Tour Dates page -->
+                <a href="game.html">Truth or Dare Game</a> <!-- Link to the Truth or Dare Game page -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="music-player-container"> <!-- Container for the music player and table -->
+        <!-- Music Player Div -->
+        <div class="stylized-music-player"> <!-- Stylized container for the music player -->
+            <div class="track-info"> <!-- Container for the track info -->
+                <h2 id="trackTitle">Moonshine Prigada</h2> <!-- Display the track title -->
+                <p id="trackArtist">DJ Moonshine</p> <!-- Display the artist name -->
+            </div>
+            <div class="controls"> <!-- Container for the audio controls -->
+                <audio id="audioPlayer" src="moonshine-prigida-main-version-01-36-17027.mp3"></audio> <!-- Audio element linked to the music file, with an ID for JavaScript control -->
+                <button id="playPauseBtn">Play</button> <!-- Button to play/pause the audio, controlled by JavaScript -->
+                <input type="range" id="seekBar" value="0"> <!-- Seek bar to show and control the progress of the audio track -->
+                <p id="currentTime">3:45</p> <!-- Display the current time of the track -->
+            </div>
+        </div>
+
+        <!-- Track List Section -->
+        <div class="table-container"> <!-- Container for the track list table -->
+            <h2>Track List</h2> <!-- Heading for the track list section -->
+            <div class="table-scroll"> <!-- Container that makes the table scrollable if it exceeds the container height -->
+                <table> <!-- Table that lists the tracks -->
+                    <thead>
+                        <tr>
+                            <th>Track Name</th> <!-- Table header for track names -->
+                            <th>Artist</th> <!-- Table header for artist names -->
+                            <th>Duration</th> <!-- Table header for track durations -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Moonshine Prigada</td> <!-- Track name in the first row -->
+                            <td>DJ Moonshine</td> <!-- Artist name in the first row -->
+                            <td>3:45</td> <!-- Duration of the first track -->
+                        </tr>
+                        <tr>
+                            <td>Walk on the Moon</td> <!-- Track name in the second row -->
+                            <td>DJ Moonshine</td> <!-- Artist name in the second row -->
+                            <td>4:05</td> <!-- Duration of the second track -->
+                        </tr>
+                        <tr>
+                            <td>Into the Universe</td> <!-- Track name in the third row -->
+                            <td>DJ Moonshine</td> <!-- Artist name in the third row -->
+                            <td>5:25</td> <!-- Duration of the third track -->
+                        </tr>
+                        <!-- Add more tracks as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script> <!-- Links to an external JavaScript file for interactive functionality, such as controlling the audio player -->
+</body>
+</html>
+
+
+
+
+

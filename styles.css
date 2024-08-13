@@ -1,0 +1,396 @@
+:root {
+    /* Define color variables for the entire site */
+    --primary-color: #ff007f; /* Neon Pink for primary elements */
+    --secondary-color: #00ccff; /* Electric Blue for secondary elements */
+    --accent-color: #ffffff; /* Soft White for text and highlights */
+    --dark-accent-color: #1a1a1a; /* Deep Black for shadows and dark accents */
+    --background-dark: #121212; /* Very Dark Gray for backgrounds */
+    --highlight-color: #7d00ff; /* Deep Purple for hover effects and highlights */
+}
+
+body, html {
+    /* Basic resets and default styling for the body and HTML elements */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Use Arial as the default font */
+    background-color: var(--background-dark); /* Apply dark background color */
+    color: var(--accent-color); /* Default text color in soft white */
+}
+
+nav {
+    /* Styling for the navigation menu */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10; /* Ensure the navigation stays on top of other elements */
+}
+
+.dropdown {
+    /* Container for dropdown menu */
+    position: relative;
+    display: inline-block; /* Display dropdown as inline block */
+}
+
+.dropbtn {
+    /* Button that triggers the dropdown menu */
+    background-color: var(--primary-color); /* Neon Pink background */
+    color: var(--accent-color); /* Soft White text */
+    padding: 16px;
+    font-size: 16px;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.dropdown-content {
+    /* Hidden dropdown menu content */
+    display: none;
+    position: absolute;
+    background-color: var(--background-dark); /* Dark background for the dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add shadow for depth */
+    z-index: 1; /* Ensure dropdown content appears above other elements */
+}
+
+.dropdown-content a {
+    /* Styling for links inside the dropdown menu */
+    color: var(--accent-color); /* Soft White text */
+    padding: 12px 16px;
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make each link take up full width */
+}
+
+.dropdown-content a:hover {
+    /* Change background on hover */
+    background-color: var(--highlight-color); /* Deep Purple background on hover */
+}
+
+.show {
+    /* Class to show the dropdown menu */
+    display: block;
+}
+
+.home-background,
+.profile-background,
+.music-background, 
+.tour-background {
+    /* Shared styling for different page backgrounds */
+    background-image: url('home_bg.jpg'); /* Background image for all these sections */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Background specific to each page */
+.home-background {
+    background-image: url('home_bg.jpg');
+}
+
+.profile-background {
+    background-image: url('profile_bg.jpg');
+}
+
+.music-background {
+    background-image: url('music_bg.jpg');
+}
+
+.tour-background {
+    background-image: url('tour_bg.jpg');
+}
+
+.background {
+    /* General background styling for centered content */
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text {
+    /* Styling for centered text in the background */
+    color: var(--accent-color); /* Soft White text */
+    font-size: 48px; /* Large font size */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px var(--dark-accent-color); /* Add a dark shadow to the text */
+    margin-top: 20px;
+}
+
+/* Blog Posts Section */
+.blog-container {
+    /* Container for blog posts */
+    display: flex;
+    justify-content: center; /* Center the blog posts container */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow posts to wrap on smaller screens */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px; /* Add spacing between blog posts */
+}
+
+.blog-post {
+    /* Styling for individual blog posts */
+    background-color: var(--background-dark); /* Dark Background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center; /* Center the text within the blog post */
+    color: var(--accent-color); /* Soft White text */
+}
+
+.blog-post img {
+    /* Styling for images in blog posts */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 15px;
+}
+
+.blog-post h2 {
+    /* Styling for blog post titles */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    /* Styling for blog post content */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Profile and Booking Inquiry Container */
+.profile-booking-container {
+    /* Container that holds both profile info and booking form */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 20px; /* Space between profile info and booking form */
+}
+
+/* Profile Info */
+.profile-info {
+    /* Container for the artist's profile information */
+    background-color: var(--background-dark); /* Dark Background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    padding: 20px;
+    width: 48%; /* Adjust width to be the same as the booking form */
+    text-align: center; /* Center the text within the profile info */
+    color: var(--accent-color); /* Soft White text */
+}
+
+.profile-pic {
+    /* Styling for the profile picture */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.profile-info h2 {
+    /* Styling for the profile name/title */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    /* Styling for additional profile information */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Booking Form */
+.booking-form {
+    /* Container for the booking inquiry form */
+    background-color: var(--background-dark); /* Dark Background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    padding: 20px;
+    width: 48%; /* Adjust width to be the same as the profile info */
+    text-align: center; /* Center the text within the booking form */
+    color: var(--accent-color); /* Soft White text */
+}
+
+.booking-form h1 {
+    /* Styling for the booking form heading */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booking-form input, .booking-form textarea {
+    /* Styling for input fields and textarea in the booking form */
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--secondary-color); /* Electric Blue Border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    background-color: var(--background-dark); /* Dark Input Background */
+    color: var(--accent-color); /* Soft White Text */
+}
+
+.booking-form button {
+    /* Styling for the submit button in the booking form */
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Neon Pink */
+    color: var(--accent-color); /* Soft White */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.booking-form button:hover {
+    /* Styling for button on hover */
+    background-color: var(--secondary-color); /* Electric Blue Hover */
+}
+
+#warning {
+    /* Styling for warning messages in the booking form */
+    color: var(--primary-color); /* Neon Pink */
+    margin-top: 10px;
+}
+
+#confirmation {
+    /* Styling for confirmation messages in the booking form */
+    color: var(--secondary-color); /* Electric Blue */
+    margin-top: 10px;
+}
+
+/* Music Player and Table Containers */
+.music-player-container, .table-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stylized-music-player, .stylized-table-container {
+    background-color: var(--background-dark); /* Dark background to match the theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent-color); /* Soft White text */
+}
+
+/* Larger centered text for Tour Dates */
+.top-centered-text {
+    color: var(--accent-color); /* Soft White */
+    font-size: 64px; /* Increase font size */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px var(--dark-accent-color); /* Dark Shadow */
+    margin-top: 20px;
+}
+
+/* Center the table container with even spacing */
+.centered-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Center in both directions */
+    width: 80%;
+    max-width: 800px;
+    height: 80vh; /* Takes 80% of the viewport height */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    background-color: var(--background-dark); /* Dark Table Background */
+    color: var(--accent-color); /* Soft White */
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border: 1px solid var(--primary-color); /* Neon Pink Border */
+    text-align: left;
+}
+
+table thead tr {
+    background-color: var(--primary-color); /* Neon Pink */
+    color: var(--accent-color); /* Soft White */
+    text-align: left;
+    font-weight: bold;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: var(--secondary-color); /* Electric Blue */
+}
+
+table tbody tr:hover {
+    background-color: var(--highlight-color); /* Deep Purple */
+}
+
+.game-background {
+    background-image: url('game_bg.jpg'); /* Background image for the game page */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.game-container {
+    /* Styling for the game container */
+    background-color: var(--background-dark); /* Dark background to match the theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
+    text-align: center; /* Center text within the container */
+    width: 80%;
+    max-width: 600px;
+    margin: auto; /* Center the container horizontally */
+}
+
+h1 {
+    font-size: 36px; /* Large font size for the game title */
+    margin-bottom: 20px; /* Space below the title */
+    color: var(--accent-color); /* Soft White text */
+}
+
+button {
+    background-color: var(--primary-color); /* Neon Pink background for buttons */
+    color: var(--accent-color); /* Soft White text */
+    border: none; /* Remove default button border */
+    padding: 10px 20px;
+    margin: 10px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+button:hover {
+    background-color: var(--secondary-color); /* Electric Blue on hover */
+}
+
+p#result {
+    font-size: 18px; /* Medium font size for displaying results */
+    margin-top: 20px; /* Space above the result text */
+    color: var(--accent-color); /* Soft White text */
+}

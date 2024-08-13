@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive and scales correctly on different devices -->
+    <title>Artist Profile</title> <!-- The title of the page, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling the page -->
+</head>
+<body class="profile-background"> <!-- Applies a background image using the "profile-background" class -->
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="dropdown"> <!-- Container for the dropdown menu -->
+            <button class="dropbtn" onclick="toggleDropdown()">Menu</button> <!-- Button that toggles the dropdown menu when clicked -->
+            <div id="myDropdown" class="dropdown-content"> <!-- The dropdown content, hidden by default, shown when the button is clicked -->
+                <a href="index.html">Home</a> <!-- Link to the Home page -->
+                <a href="profile.html">Artist Profile</a> <!-- Link to the Artist Profile page -->
+                <a href="music.html">Music Player</a> <!-- Link to the Music Player page -->
+                <a href="tour.html">Tour Dates</a> <!-- Link to the Tour Dates page -->
+                <a href="game.html">Truth or Dare Game</a> <!-- Link to the Truth or Dare Game page -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Container for Centered Text -->
+    <div class="background">
+        <div class="centered-text">Artist Profile</div> <!-- Centered text displaying the page title -->
+    </div>
+
+    <!-- Profile and Booking Inquiry Section -->
+    <div class="profile-booking-container"> <!-- Container that holds both profile info and booking form -->
+        
+        <!-- Profile Info Section -->
+        <div class="profile-info"> <!-- Container for the artist's profile information -->
+            <img src="dj_profile_upscayl_6x_ultrasharp.jpg" alt="DJ Profile Picture" class="profile-pic"> <!-- Profile picture of the artist -->
+            <h2>DJ MOONSHINE</h2> <!-- Artist's name -->
+            <p>Location: New York, NY</p> <!-- Artist's location -->
+            <p>Genre: Electronic, House, Techno</p> <!-- Music genres associated with the artist -->
+            <h3>Biography</h3> <!-- Subtitle for the biography section -->
+            <p>
+                DJ MOONSHINE has been spinning records and rocking dance floors for over a decade. Known for their unique blend of electronic beats and vibrant energy, DJ MOONSHINE has performed at some of the most renowned clubs and festivals worldwide.
+            </p> <!-- Brief biography of the artist -->
+        </div>
+
+        <!-- Booking Inquiry Form Section -->
+        <div class="booking-form"> <!-- Container for the booking inquiry form -->
+            <h1>Booking Inquiry</h1> <!-- Heading for the booking form -->
+            <form id="bookingForm"> <!-- Form for booking inquiries -->
+                <input type="text" id="firstName" name="firstName" placeholder="First Name"> <!-- Input field for first name -->
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name"> <!-- Input field for last name -->
+                <input type="email" id="email" name="email" placeholder="Email"> <!-- Input field for email -->
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number"> <!-- Input field for phone number -->
+                <input type="date" id="eventDate" name="eventDate"> <!-- Input field for event date -->
+                <textarea id="message" name="message" placeholder="Additional Information" rows="4"></textarea> <!-- Textarea for additional information -->
+                <button type="submit">Submit</button> <!-- Submit button for the form -->
+            </form>
+            <div id="warning"></div> <!-- Div to display warnings or errors -->
+            <div id="confirmation"></div> <!-- Div to display confirmation messages -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Links to an external JavaScript file for interactive functionality -->
+</body>
+</html>
+
+
+

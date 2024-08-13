@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive and scales correctly on different devices -->
+    <title>Tour Dates</title> <!-- The title of the page, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling the page -->
+</head>
+<body class="tour-background"> <!-- Applies a background image using the "tour-background" class -->
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="dropdown"> <!-- Container for the dropdown menu -->
+            <button class="dropbtn" onclick="toggleDropdown()">Menu</button> <!-- Button that toggles the dropdown menu when clicked -->
+            <div id="myDropdown" class="dropdown-content"> <!-- The dropdown content, hidden by default, shown when the button is clicked -->
+                <a href="index.html">Home</a> <!-- Link to the Home page -->
+                <a href="profile.html">Artist Profile</a> <!-- Link to the Artist Profile page -->
+                <a href="music.html">Music Player</a> <!-- Link to the Music Player page -->
+                <a href="tour.html">Tour Dates</a> <!-- Link to the Tour Dates page -->
+                <a href="game.html">Truth or Dare Game</a> <!-- Link to the Truth or Dare Game page -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Larger centered Tour Dates text -->
+    <div class="top-centered-text">Tour Dates</div> <!-- Heading for the tour dates section, centered on the page -->
+
+    <!-- Centered Table Container -->
+    <div class="centered-table-container"> <!-- Container for the table, centered on the page -->
+        <table> <!-- Table containing the tour dates information -->
+            <thead>
+                <tr>
+                    <th>Date</th> <!-- Table header for the date of the tour stop -->
+                    <th>City</th> <!-- Table header for the city where the tour stop will be held -->
+                    <th>Venue</th> <!-- Table header for the venue of the tour stop -->
+                    <th>Tickets</th> <!-- Table header for the ticket link -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>August 20, 2024</td> <!-- Date of the first tour stop -->
+                    <td>New York, NY</td> <!-- City of the first tour stop -->
+                    <td>Madison Square Garden</td> <!-- Venue of the first tour stop -->
+                    <td><a href="tickets-link" target="_blank">Buy Tickets</a></td> <!-- Link to buy tickets for the first tour stop -->
+                </tr>
+                <tr>
+                    <td>August 25, 2024</td> <!-- Date of the second tour stop -->
+                    <td>Los Angeles, CA</td> <!-- City of the second tour stop -->
+                    <td>Staples Center</td> <!-- Venue of the second tour stop -->
+                    <td><a href="tickets-link" target="_blank">Buy Tickets</a></td> <!-- Link to buy tickets for the second tour stop -->
+                </tr>
+                <tr>
+                    <td>September 1, 2024</td> <!-- Date of the third tour stop -->
+                    <td>Chicago, IL</td> <!-- City of the third tour stop -->
+                    <td>United Center</td> <!-- Venue of the third tour stop -->
+                    <td><a href="tickets-link" target="_blank">Buy Tickets</a></td> <!-- Link to buy tickets for the third tour stop -->
+                </tr>
+                <!-- Add more tour stops as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script> <!-- Links to an external JavaScript file for interactive functionality, such as the dropdown menu -->
+</body>
+</html>
+
+
+
+
+
